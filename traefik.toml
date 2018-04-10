@@ -1,0 +1,33 @@
+debug = false
+
+logLevel = "INFO"
+
+defaultEntryPoints = ["https","http"]
+
+[traefikLog]
+filePath = "log/traefik.log"
+
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
+    [entryPoints.http.redirect]
+    entryPoint = "https"
+  [entryPoints.https]
+  address = ":443"
+  [entryPoints.https.tls]
+
+[retry]
+
+[docker]
+endpoint = "unix:///var/run/docker.sock"
+domain = "my.domain.tld"
+watch = true
+exposedbydefault = false
+
+[acme]
+email = "webmaster@my.domain.tld"
+storage = "acme.json"
+entryPoint = "https"
+OnHostRule = true
+[acme.httpChallenge]
+entryPoint = "http"
