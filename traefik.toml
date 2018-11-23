@@ -1,33 +1,42 @@
-debug = false
+#debug = true
 
-logLevel = "INFO"
+defaultEntryPoints = ["http", "https"]
 
-defaultEntryPoints = ["https","http"]
+#logLevel = "DEBUG"
 
 [traefikLog]
-filePath = "log/traefik.log"
+  filePath = "log/traefik.log"
+
+#[accessLog]
+#  filePath = "log/access.log"
 
 [entryPoints]
   [entryPoints.http]
   address = ":80"
-    [entryPoints.http.redirect]
+  compress = true
+  [entryPoints.http.redirect]
     entryPoint = "https"
   [entryPoints.https]
-  address = ":443"
-  [entryPoints.https.tls]
+    address = ":443"
+    [entryPoints.https.tls]
+#  [entryPoints.traefik]
+#    address = ":8080"
 
 [retry]
 
 [docker]
-endpoint = "unix:///var/run/docker.sock"
-domain = "my.domain.tld"
-watch = true
-exposedbydefault = false
+  endpoint = "unix:///var/run/docker.sock"
+  domain = "my.domain.tld"
+  watch = true
+  exposedbydefault = false
+  network = "web"
 
 [acme]
-email = "webmaster@my.domain.tld"
-storage = "acme.json"
-entryPoint = "https"
-OnHostRule = true
-[acme.httpChallenge]
-entryPoint = "http"
+  email = "webmaster@my.domain.tld"
+  storage = "acme.json"
+  entryPoint = "https"
+  OnHostRule = true
+  [acme.httpChallenge]
+    entryPoint = "http"
+
+#[api]
