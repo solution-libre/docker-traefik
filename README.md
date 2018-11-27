@@ -1,4 +1,4 @@
-# Træfik with Docker
+# Træfik with Docker Compose
 
 #### Table of Contents
 
