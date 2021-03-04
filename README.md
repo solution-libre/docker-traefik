@@ -22,6 +22,7 @@ docker network create web
 ```
 
 Clone this repo:
+
 ```sh
 cd /opt
 git clone https://github.com/solution-libre/docker-traefik.git traefik
