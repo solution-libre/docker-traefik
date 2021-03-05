@@ -20,6 +20,7 @@ defaultEntryPoints = ["http", "https"]
     entryPoint = "https"
   [entryPoints.https]
     address = ":443"
+    compress = true
     [entryPoints.https.tls]
     MinVersion = "VersionTLS12"
     CurvePreferences = [
