@@ -46,11 +46,20 @@ docker-compose up -d
 
 Email address used for ACME registration. Default value: 'webmaster@my.domain.tld'
 
-#### `DOCKER_DOMAIN`
+#### `DEFAULT_DOMAIN`
 
-Default base domain used for the frontend rules.
-Can be overridden by setting the "traefik.domain" label on a container.
+Default TLS domains.
 Default value: 'my.domain.tld'
+
+#### `HTTP_PORT`
+
+HTTP listen port.
+Default value: 80
+
+#### `HTTPS_PORT`
+
+HTTPs listen port.
+Default value: 443
 
 ## Development
 
