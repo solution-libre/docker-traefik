@@ -17,7 +17,11 @@ services:
       - --entrypoints.websecure.http.middlewares=default@file
       - --entrypoints.websecure.http.tls.domains=${DEFAULT_DOMAIN}
       - --entrypoints.websecure.http.tls.options=default@file
-      - --certificatesresolvers.myresolver.acme.tlschallenge=true
+      - --certificatesresolvers.myresolver.acme.dnschallenge=${ACME_DNS_CHALLENGE}
+      - --certificatesresolvers.myresolver.acme.dnschallenge.provider=${ACME_DNS_CHALLENGE_PROVIDER}
+      - --certificatesresolvers.myresolver.acme.httpchallenge=${ACME_HTTP_CHALLENGE}
+      - --certificatesresolvers.myresolver.acme.httpchallenge.entrypoint=web
+      - --certificatesresolvers.myresolver.acme.tlschallenge=${ACME_TLS_CHALLENGE}
       - --certificatesresolvers.myresolver.acme.email=${ACME_EMAIL}
       - --certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json
       # Enable API
