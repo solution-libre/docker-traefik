@@ -5,7 +5,6 @@ services:
     image: traefik:v2.4
     restart: always
     command:
-      - --api.insecure=true
       - --providers.docker=true
       - --providers.docker.exposedbydefault=false
       - --providers.docker.network=web
@@ -23,6 +22,7 @@ services:
       - --certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json
       # Enable API
       #- --api
+      #- --api.insecure=true
       # Optionally uncomment the following lines if you want to test/debug:
       #- --log.level=DEBUG
       #- --certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory
