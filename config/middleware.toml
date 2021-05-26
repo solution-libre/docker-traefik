@@ -1,0 +1,7 @@
+[http.middlewares.default.headers]
+  browserXssFilter = true
+  contentTypeNosniff = true
+  frameDeny = true
+  stsIncludeSubdomains = true
+  stsSeconds = 315360000
+  stsPreload = true
