@@ -1,5 +1,6 @@
 # Træfik with Docker Compose
 
+<!-- markdownlint-disable-next-line MD001 -->
 #### Table of Contents
 
 1. [Description](#description)
@@ -11,7 +12,8 @@
 
 ## Description
 
-[Docker Compose](https://docs.docker.com/compose/) setup for starting [Træfik](https://traefik.io/) with [Let's Encrypt](https://letsencrypt.org/).
+[Docker Compose](https://docs.docker.com/compose/) setup for starting [Træfik](https://traefik.io/)
+with [Let's Encrypt](https://letsencrypt.org/).
 
 ## Setup
 
@@ -35,7 +37,7 @@ Declare environment variables or copy the `.env.dist` to `.env` and adjust its v
 
 ```sh
 cd /opt/traefik
-docker-compose up -d
+docker compose up -d
 ```
 
 ## Reference
@@ -76,7 +78,8 @@ HTTPs listen port. (Default: `443`)
 
 ## Development
 
-[Solution Libre](https://www.solution-libre.fr)'s repositories are open projects, and community contributions are essential for keeping them great.
+[Solution Libre](https://www.solution-libre.fr)'s repositories are open projects,
+and community contributions are essential for keeping them great.
 
 [Fork this repo on GitHub](https://github.com/solution-libre/docker-traefik/fork)
 
