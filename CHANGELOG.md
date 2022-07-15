@@ -7,6 +7,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- markdownlint-configure-file { "MD024": { "allow_different_nesting": true } } -->
 
+## [2.0.0] 2022-07-15
+
+### Added
+
+- Add a default middleware to:
+  - Force Strict-Transport-Security,
+  - Force X-XSS-Protection,
+  - Force X-Content-Type-Options: nosniff.
+- Add [Dependabot](https://github.com/dependabot) in CI.
+
+### Changed
+
+- Upgrade to [Træfik](https://traefik.io/) [v2.8](https://doc.traefik.io/traefik/v2.8/).
+- Set minimum version of TLS to v1.2.
+- Move acme.json to a named volume.
+
 ## [1.3.0] 2021-03-05
 
 ### Added
@@ -41,6 +57,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [Docker Compose](https://docs.docker.com/compose/) setup for starting [Træfik](https://traefik.io/)
 [v1.6](https://doc.traefik.io/traefik/v1.6/) with [Let's Encrypt](https://letsencrypt.org/).
 
+[2.0.0]: https://github.com/solution-libre/docker-traefik/compare/v1.3.0...v2.0.0
 [1.3.0]: https://github.com/solution-libre/docker-traefik/compare/v1.2.0...v1.3.0
 [1.2.0]: https://github.com/solution-libre/docker-traefik/compare/v1.1.0...v1.2.0
 [1.1.0]: https://github.com/solution-libre/docker-traefik/compare/v1.0.0...v1.1.0
