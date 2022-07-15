@@ -44,15 +44,37 @@ docker compose up -d
 
 ### Environment variables
 
+#### `ACME_DNS_CHALLENGE`
+
+Activate DNS-01 Challenge. (Default: `false`)
+
+#### `ACME_DNS_CHALLENGE_PROVIDER`
+
+Use a DNS-01 based challenge provider rather than HTTPs.
+
 #### `ACME_EMAIL`
 
-Email address used for ACME registration. Default value: 'webmaster@my.domain.tld'
+Email address used for ACME registration. (Default: `webmaster@my.domain.tld`)
 
-#### `DOCKER_DOMAIN`
+#### `ACME_HTTP_CHALLENGE`
 
-Default base domain used for the frontend rules.
-Can be overridden by setting the "traefik.domain" label on a container.
-Default value: 'my.domain.tld'
+Activate HTTP-01 Challenge. (Default: `false`)
+
+#### `ACME_TLS_CHALLENGE`
+
+Activate TLS-ALPN-01 Challenge. (Default: `true`)
+
+#### `DEFAULT_DOMAIN`
+
+Default TLS domains. (Default: `my.domain.tld`)
+
+#### `HTTP_PORT`
+
+HTTP listen port. (Default: `80`)
+
+#### `HTTPS_PORT`
+
+HTTPs listen port. (Default: `443`)
 
 ## Development
 
