@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- markdownlint-configure-file { "MD024": { "allow_different_nesting": true } } -->
 
+## [2.1.0] 2023-08-23
+
+### Changed
+
+- Upgrade to [Træfik](https://traefik.io/) [v2.10](https://doc.traefik.io/traefik/v2.10/).
+- Rename the `docker-compose.yml` file to `compose.yml`
+
 ## [2.0.0] 2022-07-15
 
 ### Added
