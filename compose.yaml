@@ -28,7 +28,9 @@ services:
       #- --certificatesresolvers.myresolver.acme.caserver=https://acme-staging-v02.api.letsencrypt.org/directory
       # Controls whether the server's certificate chain and host name is verified
       #- --serverstransport.insecureskipverify=true
-    image: traefik:v2.10
+      # To enable the Prometheus metrics
+      #- --metrics.prometheus=true
+    image: traefik:${VERSION}
     networks:
       - web
     ports:
