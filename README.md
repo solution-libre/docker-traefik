@@ -13,7 +13,7 @@
 ## Description
 
 [Docker Compose](https://docs.docker.com/compose/) setup for starting [Træfik](https://traefik.io/)
-with [Let's Encrypt](https://letsencrypt.org/).
+with [Let's Encrypt](https://letsencrypt.org/) by [Solution Libre].
 
 ## Setup
 
@@ -27,7 +27,7 @@ Clone this repo:
 
 ```sh
 cd /opt
-git clone https://github.com/solution-libre/docker-traefik.git traefik
+git clone https://usine.solution-libre.fr/docker/traefik.git
 cd traefik
 ```
 
@@ -78,11 +78,14 @@ HTTPs listen port. (Default: `443`)
 
 ## Development
 
-[Solution Libre](https://www.solution-libre.fr)'s repositories are open projects,
+[Solution Libre]'s repositories are open projects,
 and community contributions are essential for keeping them great.
 
-[Fork this repo on GitHub](https://github.com/solution-libre/docker-traefik/fork)
+[Fork this repo on our GitLab](https://usine.solution-libre.fr/docker/traefik/-/forks/new) or
+[on GitHub](https://github.com/solution-libre/docker-traefik/fork)
 
 ## Contributors
 
-The list of contributors can be found at: <https://github.com/solution-libre/docker-traefik/graphs/contributors>
+The list of contributors can be found at: <https://usine.solution-libre.fr/docker/traefik/-/graphs/main>
+
+[Solution Libre]: https://www.solution-libre.fr
