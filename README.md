@@ -42,39 +42,7 @@ docker compose up -d
 
 ## Reference
 
-### Environment variables
-
-#### `ACME_DNS_CHALLENGE`
-
-Activate DNS-01 Challenge. (Default: `false`)
-
-#### `ACME_DNS_CHALLENGE_PROVIDER`
-
-Use a DNS-01 based challenge provider rather than HTTPs.
-
-#### `ACME_EMAIL`
-
-Email address used for ACME registration. (Default: `webmaster@my.domain.tld`)
-
-#### `ACME_HTTP_CHALLENGE`
-
-Activate HTTP-01 Challenge. (Default: `false`)
-
-#### `ACME_TLS_CHALLENGE`
-
-Activate TLS-ALPN-01 Challenge. (Default: `true`)
-
-#### `DEFAULT_DOMAIN`
-
-Default TLS domains. (Default: `my.domain.tld`)
-
-#### `HTTP_PORT`
-
-HTTP listen port. (Default: `80`)
-
-#### `HTTPS_PORT`
-
-HTTPs listen port. (Default: `443`)
+See [REFERENCE.md](./REFERENCE.md).
 
 ## Development
 
