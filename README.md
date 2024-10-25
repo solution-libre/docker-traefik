@@ -1,4 +1,4 @@
-# Træfik with Docker Compose
+# Traefik with Docker Compose
 
 <!-- markdownlint-disable-next-line MD001 -->
 #### Table of Contents
@@ -12,7 +12,7 @@
 
 ## Description
 
-[Docker Compose](https://docs.docker.com/compose/) setup for starting [Træfik](https://traefik.io/)
+[Docker Compose](https://docs.docker.com/compose/) setup for starting [Traefik](https://traefik.io/)
 with [Let's Encrypt](https://letsencrypt.org/) by [Solution Libre].
 
 ## Setup

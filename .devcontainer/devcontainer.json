@@ -28,10 +28,11 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"ms-azuretools.vscode-docker",
+				"mikestead.dotenv",
 				"gitlab.gitlab-workflow",
 				"ymotongpoo.licenser",
 				"davidanson.vscode-markdownlint",
+				"ms-azuretools.vscode-docker",
 				"redhat.vscode-yaml"
 			]
 		}
