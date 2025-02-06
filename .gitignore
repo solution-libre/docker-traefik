@@ -1,4 +1,5 @@
 .env
+.env.traefik
 acme.json
 compose.override.yaml
 compose.override.yml
