@@ -29,6 +29,8 @@ stages:
 
 docker compose test:
   stage: test
+  before_script:
+    - cp .env.traefik.dist .env.traefik
   script:
     - docker compose --env-file .env.dist config -q
 
