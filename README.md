@@ -17,21 +17,22 @@ with [Let's Encrypt](https://letsencrypt.org/) by [Solution Libre].
 
 ## Setup
 
-Create an external network:
+1. Create an external network:
 
-```sh
-docker network create web
-```
+    ```sh
+    docker network create web
+    ```
 
-Clone this repo:
+2. Clone this repo:
 
-```sh
-cd /opt
-git clone https://usine.solution-libre.fr/docker/traefik.git
-cd traefik
-```
+    ```sh
+    cd /opt
+    git clone https://usine.solution-libre.fr/docker/traefik.git
+    cd traefik
+    ```
 
-Declare environment variables or copy the `.env.dist` to `.env` and adjust its values.
+3. Declare environment variables or copy the `.env.dist` to `.env` and adjust its values.
+4. Copy the `.env.traefik.dist` to `.env.traefik` and adjust its values.
 
 ## Usage
 
