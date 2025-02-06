@@ -9,6 +9,8 @@ jobs:
       image: docker:latest
     steps:
       - uses: actions/checkout@v4
+      - name: Copy env file
+        run: cp .env.traefik.dist .env.traefik
       - name: Check Docker Compose file syntax
         run: docker compose --env-file .env.dist config -q
   check-markdown-syntax:
