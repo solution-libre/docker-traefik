@@ -16,8 +16,9 @@
 # along with Traefik with Docker Compose.  If not, see <https://www.gnu.org/licenses/>.
 
 networks:
-  ${NETWORK_NAME:-web}:
+  proxy:
     external: true
+    name: ${NETWORK_NAME:-web}
 
 services:
   traefik:
@@ -44,7 +45,7 @@ services:
     env_file: '.env.traefik'
     image: traefik:${VERSION}
     networks:
-      - ${NETWORK_NAME:-web}
+      - proxy
     ports:
       - ${HTTP_PORT}:${HTTP_PORT}
       - ${HTTPS_PORT}:${HTTPS_PORT}
