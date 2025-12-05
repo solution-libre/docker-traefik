@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- markdownlint-configure-file { "MD024": { "siblings_only": true } } -->
 
+## [3.1.0] - 2025-12-05
+
+### Added
+
+- Environment variable `NETWORK_NAME` to configure external network name (default: `web`)
+
 ## [3.0.0] - 2025-01-06
 
 ### Changed
@@ -88,6 +94,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - [Docker Compose](https://docs.docker.com/compose/) setup for starting [Traefik](https://traefik.io/)
 [v1.6](https://doc.traefik.io/traefik/v1.6/) with [Let's Encrypt](https://letsencrypt.org/).
 
+[3.1.0]: https://usine.solution-libre.fr/docker/traefik/-/compare/v3.0.0...v3.1.0
 [3.0.0]: https://usine.solution-libre.fr/docker/traefik/-/compare/v2.2.0...v3.0.0
 [2.2.0]: https://usine.solution-libre.fr/docker/traefik/-/compare/v2.1.0...v2.2.0
 [2.1.0]: https://usine.solution-libre.fr/docker/traefik/-/compare/v2.0.0...v2.1.0

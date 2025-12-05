@@ -10,4 +10,5 @@
 | DEFAULT_DOMAIN       | Default TLS domains                                     | `my.domain.tld`           | true    |
 | HTTP_PORT            | HTTP listen port                                        | `80`                      | true    |
 | HTTPS_PORT           | HTTPs listen port                                       | `443`                     | true    |
+| NETWORK_NAME         | External network name                                   | `web`                     | true    |
 | VERSION              | Tag of the Docker image of Traefik                      | `v3.1`                    | true    |

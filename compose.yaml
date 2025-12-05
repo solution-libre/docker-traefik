@@ -16,7 +16,7 @@
 # along with Traefik with Docker Compose.  If not, see <https://www.gnu.org/licenses/>.
 
 networks:
-  web:
+  ${NETWORK_NAME:-web}:
     external: true
 
 services:
@@ -24,7 +24,7 @@ services:
     environment:
       TRAEFIK_TRAEFIK_PROVIDERS_DOCKER: true
       TRAEFIK_PROVIDERS_DOCKER_EXPOSEDBYDEFAULT: false
-      TRAEFIK_PROVIDERS_DOCKER_NETWORK: web
+      TRAEFIK_PROVIDERS_DOCKER_NETWORK: ${NETWORK_NAME:-web}
       TRAEFIK_PROVIDERS_FILE_DIRECTORY: /etc/traefik
       TRAEFIK_PROVIDERS_FILE_WATCH: true
       TRAEFIK_ENTRYPOINTS_WEB_ADDRESS: :${HTTP_PORT}
@@ -44,7 +44,7 @@ services:
     env_file: '.env.traefik'
     image: traefik:${VERSION}
     networks:
-      - web
+      - ${NETWORK_NAME:-web}
     ports:
       - ${HTTP_PORT}:${HTTP_PORT}
       - ${HTTPS_PORT}:${HTTPS_PORT}
