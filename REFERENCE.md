@@ -1,5 +1,19 @@
 # Reference
 
+## File Structure
+
+```text
+├── compose.yaml         # Docker Compose file
+├── .env.dist            # Environment variables template
+├── .env.traefik.dist    # Traefik environment variables template
+├── config/              # Traefik configuration
+│   ├── middlewares.yaml # Middlewares configuration
+│   └── tls.yaml         # TLS configuration
+└── volumes/             # Directory for symbolic links of persistent volumes
+```
+
+## Variables
+
 | Name                 | Description                                             | Default value             | Enabled |
 | -------------------- | ------------------------------------------------------- | ------------------------- | ------- |
 | ACME_DNS_CHALLENGE   | Activate DNS-01 Challenge                               | `false`                   | true    |
@@ -12,3 +26,11 @@
 | HTTPS_PORT           | HTTPs listen port                                       | `443`                     | true    |
 | NETWORK_NAME         | External network name                                   | `web`                     | true    |
 | VERSION              | Tag of the Docker image of Traefik                      | `v3.1`                    | true    |
+
+## Security
+
+- TLS 1.2 minimum
+- Secure cipher suites (excludes obsolete algorithms)
+- HTTP security headers (HSTS, CSP, X-Frame-Options, etc.)
+- API disabled by default
+- Let's Encrypt certificates automatically renewed

@@ -41,6 +41,31 @@ cd /opt/traefik
 docker compose up -d
 ```
 
+For a service to be accessible through Traefik, it must:
+
+1. Be connected to the Traefik network (default `web`)
+2. Have the appropriate Docker labels
+
+Example Docker Compose configuration for a service:
+
+```yaml
+services:
+  myapp:
+    image: myapp:latest
+    networks:
+      - web
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.myapp.rule=Host(`myapp.example.com`)"
+      - "traefik.http.routers.myapp.entrypoints=websecure"
+      - "traefik.http.routers.myapp.tls.certresolver=myresolver"
+      - "traefik.http.services.myapp.loadbalancer.server.port=80"
+
+networks:
+  proxy:
+    external: true
+```
+
 ## Reference
 
 See [REFERENCE.md](./REFERENCE.md).
