@@ -25,7 +25,22 @@
 | HTTP_PORT            | HTTP listen port                                        | `80`                      | true    |
 | HTTPS_PORT           | HTTPs listen port                                       | `443`                     | true    |
 | NETWORK_NAME         | External network name                                   | `web`                     | true    |
-| VERSION              | Tag of the Docker image of Traefik                      | `v3.1`                    | true    |
+| VERSION              | Tag of the Docker image of Traefik                      | `v3.6`                    | true    |
+
+## Traefik Environment Variables
+
+| Name                       | Description               | Default value | Enabled |
+| ---------------------------| ------------------------- | --------------| ------- |
+| TRAEFIK_API                | Enable API                | `true`        | false   |
+| TRAEFIK_API_INSECURE       | Enable API Insecure Mode  | `true`        | false   |
+| TRAEFIK_LOG_LEVEL          | Log Level                 | `DEBUG`       | false   |
+| TRAEFIK_CERTIFICATESRESOLVERS_MYRESOLVER_ACME_CASERVER | ACME CA Server URL | `https://acme-staging-v02.api.letsencrypt.org/directory` | false |
+| TRAEFIK_METRICS_PROMETHEUS | Enable Prometheus Metrics | `true`        | false   |
+
+This list is non-exhaustive and provided as an example.
+Since the configuration is passed to the service, you can add any environment variable supported by Traefik.
+Please refer to the [official documentation](https://doc.traefik.io/traefik/reference/install-configuration/configuration-options/)
+for the complete list.
 
 ## Security
 

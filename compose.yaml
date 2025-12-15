@@ -45,7 +45,7 @@ services:
     env_file: '.env.traefik'
     image: traefik:${VERSION}
     networks:
-      - proxy
+      proxy:
     ports:
       - ${HTTP_PORT}:${HTTP_PORT}
       - ${HTTPS_PORT}:${HTTPS_PORT}
